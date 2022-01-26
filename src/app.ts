@@ -8,7 +8,14 @@ const app = express();
 app.set("port",process.env.PORT);
 createConnection();    
 // Middlewares
-app.use(cors());
+const options: cors.CorsOptions = {
+    allowedHeaders: [
+      'Authorization'
+    ],
+    methods: 'GET,PUT,POST,DELETE',
+    origin:'*'
+};
+app.use(cors(options));
 app.use(express.json());
 app.use(morgan('dev'));
 app.disable("x-powered-by");
