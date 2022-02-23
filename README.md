@@ -1,4 +1,4 @@
-# Imaginamos - Pruebas
+# Pruebas
 
 ## Description
 
